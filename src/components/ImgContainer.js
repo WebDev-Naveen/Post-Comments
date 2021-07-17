@@ -4,6 +4,7 @@ function ImgContainer({ val, setId }) {
   function handleClick() {
     setId(val.id);
   }
+  console.log(val);
   return (
     <>
       <img

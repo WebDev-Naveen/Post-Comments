@@ -10,7 +10,7 @@ function Gif({ data, setId }) {
         ? data.map((val) => {
             return <ImgContainer key={val.id} val={val} setId={setId} />;
           })
-        : !Array.isArray(data) && <ImgContainer val={data} />}
+        : !Array.isArray(data) && <ImgContainer val={data} setId={setId} />}
     </div>
   );
 }

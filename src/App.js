@@ -95,7 +95,7 @@ function App() {
         val={gifVal}
         setVal={setGifVal}
       />
-      <Gif data={gifImage} setId={setId} setGifImage={setGifImage} />
+      <Gif data={gifImage} setId={setId} setGifImage={setGifImage} id={id} />
       <Button handleSubmit={handlePost} />
 
       <PostContainer data={postData} />
