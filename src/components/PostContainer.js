@@ -1,22 +1,28 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 function PostContainer({ data }) {
-  console.log(data);
+  const postedAt = Date().toLocaleString();
+
   return (
     <div className="post_container">
       <h2>Posted Comments</h2>
       {data.length > 0 ? (
         data.map((val) => {
           return (
-            <div key={Math.random() * 100}>
-              {val.inputVal && <p>Text :{val.inputVal}</p>}
+            <div key={Math.random() * 100} className="container">
+              {val.inputVal && (
+                <p>
+                  Text :<h3 style={{ width: "40%" }}>{val.inputVal}</h3>
+                </p>
+              )}
 
               {val.imgUrl && (
                 <>
-                  <span>Gif</span>
+                  <h3>Gif</h3>
                   <img src={val.imgUrl} width="100" height="100" alt="ima" />
                 </>
               )}
+              <p>postedAt: {postedAt}</p>
             </div>
           );
         })
